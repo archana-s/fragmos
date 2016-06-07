@@ -1,0 +1,98 @@
+/*
+@styleguide
+
+@title Cards
+
+Card-based layout has become popular and is great for organizing content.
+There are three types of cards offered:
+
+* card-click - cards that click
+* card-info - Informational cards that can have links/buttons in them
+* card-flip - Cards that flip to show some information on the other side
+
+<section class="card-click"><h1 class="display-1">Heading</h1><p>Lorem Ipsum</p></section>
+
+    <section class="card-click">
+      <h1 class="display-1">Heading</h1>
+      <p>Loreum Ipsum</p>
+    </section>
+
+<section class="card-info"><h1 class="display-1" style="padding-left: 14px;">Heading</h1><p style="padding-left: 14px;padding-bottom: 20px;">Lorem Ipsum</p><button class="link">Read more ...</button></section>
+
+    <section class="card-info">
+      <h1 class="display-1"> Heading </h1>
+      <p> Lorem Ipsum </p>
+      <button> Read more ... </button>
+    </section>
+
+<section class="card-flip" style="width: 250px;height: 300px;"><div class="card"><div class="front-face"><h1 class="display-1">Info</h1><p>Vestibulum volutpat pretium libero. Donec posuere vulputate arcu. Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui.</p></div><div class="back-face"><h1 class="display-1">More Info ...</h1><p>Praesent nec nisl a purus blandit viverra. Cras ultricies mi eu turpis hendrerit fringilla. Cum sociis natoque penatibus et magnis dis parturient montes.</p></div></div></section>
+
+    <section class="card-flip">
+      <div class="card">
+        <div class="front-face">
+          <h1 class="display-1">Info</h1>
+          <p>Vestibulum volutpat pretium libero. Donec posuere vulputate arcu. Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui. In ut quam vitae odio lacinia tincidunt.</p>
+        </div>
+        <div class="back-face">
+          <h1 class="display-1">More Info ...</h1>
+          <p>Praesent nec nisl a purus blandit viverra. Cras ultricies mi eu turpis hendrerit fringilla. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+        </div>
+      </div>
+    </section>
+
+<script type="text/javascript">var init = function() {var card = document.querySelector('.card');document.querySelector('.card').addEventListener('click', function() {var classes = card.getAttribute('class');if (classes.indexOf('flipped') >= 0) {card.setAttribute('class', classes.replace(/flipped/, ''));} else {card.setAttribute('class', classes + ' flipped');}}, false);};window.addEventListener('DOMContentLoaded', init, false);</script>
+*/
+
+:root {
+  --card-background: white;
+  --card-hover-background: #FBFBFB;
+  --card-flip-background: #FAFAFA;
+}
+
+.card-click, .card-info, .card-flip .card .front-face, .card-flip .card .back-face {
+  padding: 18px 24px;
+  border: 1px solid var(--color-black-g3);
+}
+
+.card-click, .card-flip {
+  cursor: pointer;
+}
+
+.card-click, .card-info, .card-flip .card- .front-face {
+  background-color: var(--card-background);
+}
+
+.card-click:hover {
+  background-color: var(--card-hover-background);
+}
+
+.card-flip {
+  perspective: 3000px;
+  position: relative;
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: transform 1.2s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-flip .front-face, .card-flip .back-face {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.card-flip .back-face {
+  background-color: var(--card-flip-background);
+  transform: rotateY(180deg);
+}

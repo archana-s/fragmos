@@ -1,0 +1,51 @@
+/* @start color */
+:root {
+    /* Main colors for the app: Logo colors, banner colors, main background  */
+    --color-primary: #000000;
+    --theme-light: #FAFAFA;
+
+    /* Text colors */
+    --color-text-primary: #000000;
+    --color-text-secondary: #333;
+    --color-text-link: #3F51B5;
+    --color-text-label: #666;
+    /** TIP: Check for contrast ratio again all background colors,
+        * notification colors, against the text colors and make sure the constrast ratio is 4.5.
+        * This makes it accessible and available to a larger audience.
+    **/
+
+    /* Overall colors for your app */
+    --color-yellow: #FFAC52;
+    --color-yellow-light: #F8DCBC;
+    --color-yellow-dark: #F4C590;
+    /** TIP: Add other colors you think are necessary for your project.
+      * Try not to include more than 3 shades of that color. This leads to color collisions and
+      * more often than not, people cannot discern the differences in subtle differences.
+    **/
+    /** TIP: This can be included as background colors, icon colors, borders.
+        These colors should not be used as color for text. Add them to text colors.
+    **/
+
+    /* Divider Colors - Used for borders and dividers*/
+    --color-divider: rgba(0, 0, 0, 0.5);
+    --color-divider-light: rgba(0, 0, 0, 0.35);
+
+    /* The inevitables */
+    --color-black-g1: rgba(0, 0, 0, 0.8);
+    --color-black-g2: rgba(0, 0, 0, 0.5);
+    --color-black-g3: rgba(0, 0, 0, 0.2);
+    --color-white-g1: rgba(255, 255, 255, 0.8);
+    --color-white-g2: rgba(255, 255, 255, 0.5);
+    --color-white-g3: rgba(255, 255, 255, 0.2);
+
+    /** TIP: Keep this section for the colors you will inevitably need in a large app.
+        Make sure to reduce to keep the variations of each shade under 3 or 5. These
+        are generally used for borders, backgrounds, icons. If you are using them with text,
+        make sure to check for the contrast ratio against your text colors and keep it 4.5 or higher
+    **/
+
+    /** TIP: Discourage lighten(color, 10%) and other similar functions.
+        As easy as this may be, it adds to color collisions. Instead, evaluate the colors
+        and add the appropriate ones here **/
+}
+/* @end color */
