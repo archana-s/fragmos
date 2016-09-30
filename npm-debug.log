@@ -1,0 +1,113 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@2.15.9
+3 info using node@v4.5.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/archanas/Documents/kala',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/archanas/.npm/kala/0.5.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/archanas/.npm correctMkdir not in flight; initializing
+10 verbose tar pack [ '/Users/archanas/.npm/kala/0.5.0/package.tgz',
+10 verbose tar pack   '/Users/archanas/Documents/kala' ]
+11 verbose tarball /Users/archanas/.npm/kala/0.5.0/package.tgz
+12 verbose folder /Users/archanas/Documents/kala
+13 info prepublish kala@0.5.0
+14 verbose addLocalTarball adding from inside cache /Users/archanas/.npm/kala/0.5.0/package.tgz
+15 verbose correctMkdir /Users/archanas/.npm correctMkdir not in flight; initializing
+16 silly cache afterAdd kala@0.5.0
+17 verbose afterAdd /Users/archanas/.npm/kala/0.5.0/package/package.json not in flight; writing
+18 verbose correctMkdir /Users/archanas/.npm correctMkdir not in flight; initializing
+19 verbose afterAdd /Users/archanas/.npm/kala/0.5.0/package/package.json written
+20 silly publish { name: 'kala',
+20 silly publish   version: '0.5.0',
+20 silly publish   description: 'A styleguide template with PostCSS and CSS4 feature set',
+20 silly publish   main: 'gulpfile.js',
+20 silly publish   dependencies: { gulp: '^3.9.1', postcss: '^5.0.16' },
+20 silly publish   devDependencies:
+20 silly publish    { 'gulp-concat': '^2.6.0',
+20 silly publish      'gulp-postcss': '^6.1.0',
+20 silly publish      postcss: '^5.0.16',
+20 silly publish      'postcss-custom-properties': '^5.0.0',
+20 silly publish      'postcss-flexbox': '^1.0.2',
+20 silly publish      'postcss-import': '^8.0.2',
+20 silly publish      'postcss-speech-bubble': '^1.0.12',
+20 silly publish      'postcss-style-guide': '^0.13.0' },
+20 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+20 silly publish   repository:
+20 silly publish    { type: 'git',
+20 silly publish      url: 'git+https://github.com/archana-s/kala.git' },
+20 silly publish   keywords: [ 'styleguide', 'style', 'patterns', 'ui' ],
+20 silly publish   author: { name: 'Archana Sankaranarayanan' },
+20 silly publish   license: 'ISC',
+20 silly publish   bugs: { url: 'https://github.com/archana-s/kala/issues' },
+20 silly publish   homepage: 'https://github.com/archana-s/kala#readme',
+20 silly publish   gitHead: '02ad8f6803dc14dc6f758ce019edcc17de667f21',
+20 silly publish   readme: 'ERROR: No README data found!',
+20 silly publish   _id: 'kala@0.5.0',
+20 silly publish   _shasum: '835d73b4788780aa0bda9d24deccac18a69dd044',
+20 silly publish   _from: '.' }
+21 verbose getPublishConfig undefined
+22 silly mapToRegistry name kala
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry data Result {
+25 silly mapToRegistry   raw: 'kala',
+25 silly mapToRegistry   scope: null,
+25 silly mapToRegistry   name: 'kala',
+25 silly mapToRegistry   rawSpec: '',
+25 silly mapToRegistry   spec: 'latest',
+25 silly mapToRegistry   type: 'tag' }
+26 silly mapToRegistry uri https://registry.npmjs.org/kala
+27 verbose publish registryBase https://registry.npmjs.org/
+28 silly publish uploading /Users/archanas/.npm/kala/0.5.0/package.tgz
+29 verbose request uri https://registry.npmjs.org/kala
+30 verbose request sending authorization for write operation
+31 info attempt registry request try #1 at 9:03:47 PM
+32 verbose request using bearer token for auth
+33 verbose request id d3c6d51d979d6d0a
+34 http request PUT https://registry.npmjs.org/kala
+35 http 403 https://registry.npmjs.org/kala
+36 verbose headers { 'content-type': 'application/json',
+36 verbose headers   'cache-control': 'max-age=300',
+36 verbose headers   'content-length': '98',
+36 verbose headers   'accept-ranges': 'bytes',
+36 verbose headers   date: 'Fri, 30 Sep 2016 04:03:47 GMT',
+36 verbose headers   via: '1.1 varnish',
+36 verbose headers   connection: 'keep-alive',
+36 verbose headers   'x-served-by': 'cache-sjc3128-SJC',
+36 verbose headers   'x-cache': 'MISS',
+36 verbose headers   'x-cache-hits': '0',
+36 verbose headers   'x-timer': 'S1475208227.585381,VS0,VE161',
+36 verbose headers   vary: 'Accept-Encoding' }
+37 verbose request invalidating /Users/archanas/.npm/registry.npmjs.org/kala on PUT
+38 error publish Failed PUT 403
+39 verbose stack Error: you do not have permission to publish "kala". Are you logged in as the correct user? : kala
+39 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+39 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+39 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+39 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:200:22)
+39 verbose stack     at emitTwo (events.js:87:13)
+39 verbose stack     at Request.emit (events.js:172:7)
+39 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1067:10)
+39 verbose stack     at emitOne (events.js:82:20)
+39 verbose stack     at Request.emit (events.js:169:7)
+39 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:988:12)
+40 verbose statusCode 403
+41 verbose pkgid kala
+42 verbose cwd /Users/archanas/Documents/kala
+43 error Darwin 14.1.0
+44 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+45 error node v4.5.0
+46 error npm  v2.15.9
+47 error code E403
+48 error you do not have permission to publish "kala". Are you logged in as the correct user? : kala
+49 error If you need help, you may report this error at:
+49 error     <https://github.com/npm/npm/issues>
+50 verbose exit [ 1, true ]
