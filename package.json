@@ -1,13 +1,13 @@
 {
   "name": "kala",
-  "version": "1.0.0",
-  "description": "A styleguide template",
-  "main": "index.js",
+  "version": "0.5.0",
+  "description": "A styleguide template with PostCSS and CSS4 feature set",
+  "main": "gulpfile.js",
   "dependencies": {
+    "gulp": "^3.9.1",
     "postcss": "^5.0.16"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-postcss": "^6.1.0",
     "postcss": "^5.0.16",
@@ -20,12 +20,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/archana-s/kala.git"
+  },
   "keywords": [
     "styleguide",
-    "styles",
+    "style",
     "patterns",
     "ui"
   ],
   "author": "Archana Sankaranarayanan",
-  "license": "MIT"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/archana-s/kala/issues"
+  },
+  "homepage": "https://github.com/archana-s/kala#readme"
 }
