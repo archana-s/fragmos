@@ -5,15 +5,18 @@
 
 Buttons can be categorized based on form and function.
 These are three categories for buttons based on function:
-1. primary-action - Ones that call for action and are bold and bright. A page can have just one of these.
-2. link - Button that looks like a link
-3. flat(default) - Buttons that are used in the page which do not immediately call for action. They are not the primary
-action for the page.
+    1. primary-action -
+       Ones that call for action and are bold and bright. A page can have just one of these.
+    2. link -
+      Button that looks like a link
+    3. flat(default) -
+       Buttons that are used in the page which do not immediately call for action.
+       They are not the primary action for the page.
 
 Buttons can be small or large depending on the usecase. Here are two variation based on form:
-1. large - padding of 16px/32px
-2. medium - padding of 12px/20px
-3. default - padding 8px/16px
+    1. large - padding of 16px/32px
+    2. medium - padding of 12px/20px
+    3. default - padding 8px/16px
 
 All buttons have a minimum width set.
 

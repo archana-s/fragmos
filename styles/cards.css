@@ -6,9 +6,9 @@
 Card-based layout has become popular and is great for organizing content.
 There are three types of cards offered:
 
-* card-click - cards that click
-* card-info - Informational cards that can have links/buttons in them
-* card-flip - Cards that flip to show some information on the other side
+    1. card-click - cards that click
+    2. card-info - Informational cards that can have links/buttons in them
+    3. card-flip - Cards that flip to show some information on the other side
 
 <section class="card-click"><h1 class="display-1">Heading</h1><p>Lorem Ipsum</p></section>
 
