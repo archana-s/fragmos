@@ -1,0 +1,40 @@
+/*
+@styleguide
+
+@title Input Controls
+
+Default styles for text, textarea, search box, radio groups and checkboxes.
+Add other variants as fit.
+
+<input type="text" placeholder="Sample text" />
+
+    <input type="text" placeholder="Sample text" />
+
+<textarea></textarea>
+
+    <textarea></textarea>
+*/
+
+input[type="text"], textarea {
+  padding: 8px 12px;
+  position: relative;
+}
+
+textarea {
+  border: 1px solid var(--color-black-g3);
+  min-width: 240px;
+  height: 100px;
+  resize: none;
+}
+
+input.search {
+
+}
+
+input[type="radio"] {
+
+}
+
+input[type="checkbox"] {
+
+}
