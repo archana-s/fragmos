@@ -1,0 +1,101 @@
+/*
+@styleguide
+
+@title Spinners
+
+List of spinners for the app
+
+<div class="spinner"></div>
+
+    <div class="spinner"></div>
+
+*/
+
+@keyframes rollingColor-1 {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+  33% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+  66% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+}
+
+@keyframes rollingColor-2 {
+  0% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+  33% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  66% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+}
+
+@keyframes rollingColor-3 {
+  0% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  33% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+  66% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.spinner, .spinner:after, .spinner:before {
+  border-radius: 100%;
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: var(--color-yellow);
+}
+
+.spinner {
+  width: 10px;
+  height: 10px;
+  animation: rollingColor-2 2s infinite ease-in;
+}
+
+.spinner::after, .spinner::before {
+  min-width: 10px;
+  min-height: 10px;
+  display: inline;
+  content: '';
+  position: absolute;
+}
+
+.spinner:after {
+  right: 0;
+  animation: rollingColor-3 2s infinite ease-in;
+}
+
+.spinner:before {
+  left: 0;
+  animation: rollingColor-1 2s infinite ease-in ;
+}

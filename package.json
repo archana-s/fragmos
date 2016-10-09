@@ -12,13 +12,15 @@
     "gulp-postcss": "^6.1.0",
     "postcss": "^5.0.16",
     "postcss-custom-properties": "^5.0.0",
+    "postcss-extend": "^1.0.5",
     "postcss-flexbox": "^1.0.2",
     "postcss-import": "^8.0.2",
     "postcss-speech-bubble": "^1.0.12",
     "postcss-style-guide": "^0.13.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "node setup"
   },
   "repository": {
     "type": "git",

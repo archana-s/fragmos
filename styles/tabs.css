@@ -1,0 +1,60 @@
+/*
+@styleguide
+
+@title Tabs
+
+Tabs/Navigation Bar
+
+Default tabs
+<ul class="tabs">
+  <li class="selected">Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+    <ul class="tabs">
+      <li class="selected">Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+Tabs with no bar
+<ul class="tabs no-bar">
+  <li class="selected">Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+    <ul class="tabs">
+      <li class="selected">Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+*/
+
+ul.tabs {
+  display: flex;
+  background-color: var(--color-primary);
+  color: var(--color-white-g1);
+}
+
+ul.tabs > li {
+  padding: 12px 32px;
+  cursor: pointer;
+}
+
+ul.tabs > li.selected {
+  border-bottom: 4px solid var(--color-yellow);
+}
+
+ul.tabs.no-bar > li.selected {
+  color: var(--color-yellow);
+  border: none;
+}
+
+@media only screen and (max-device-width: 480px) {
+  ul.tabs {
+    flex-direction: column;
+    width: 120px;
+  }
+}
