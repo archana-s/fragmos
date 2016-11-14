@@ -73,7 +73,7 @@ List of spinners for the app
   position: relative;
   margin-left: 20px;
   margin-right: 20px;
-  background-color: var(--color-yellow);
+  background-color: var(--color-primary);
 }
 
 .spinner {

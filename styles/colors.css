@@ -1,23 +1,22 @@
 /* @start color */
 :root {
     /* Main colors for the app: Logo colors, banner colors, main background  */
-    --color-primary: #000000;
+    --color-primary: #FF8788;
     --theme-light: #FAFAFA;
+    --theme-white: white;
 
     /* Text colors */
     --color-text-primary: #000000;
-    --color-text-secondary: #333;
+    --color-text-secondary: #222;
     --color-text-link: #3F51B5;
-    --color-text-label: #666;
     /** TIP: Check for contrast ratio again all background colors,
         * notification colors, against the text colors and make sure the constrast ratio is 4.5.
         * This makes it accessible and available to a larger audience.
     **/
 
     /* Overall colors for your app */
-    --color-yellow: #FFAC52;
-    --color-yellow-light: #F8DCBC;
-    --color-yellow-dark: #F4C590;
+    --color-accent-red-light: #FF00;
+
     /** TIP: Add other colors you think are necessary for your project.
       * Try not to include more than 3 shades of that color. This leads to color collisions and
       * more often than not, people cannot discern the differences in subtle differences.
@@ -47,5 +46,21 @@
     /** TIP: Discourage lighten(color, 10%) and other similar functions.
         As easy as this may be, it adds to color collisions. Instead, evaluate the colors
         and add the appropriate ones here **/
+}
+
+.theme-light {
+  background-color: var(--theme-light);
+}
+
+.color-text-primary {
+  color: var(--color-text-primary);
+}
+
+.color-text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.color-text-link {
+  color: var(--color-text-link);
 }
 /* @end color */

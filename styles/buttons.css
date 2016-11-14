@@ -14,9 +14,9 @@ These are three categories for buttons based on function:
        They are not the primary action for the page.
 
 Buttons can be small or large depending on the usecase. Here are two variation based on form:
-    1. large - padding of 16px/32px
-    2. medium - padding of 12px/20px
-    3. default - padding 8px/16px
+    1. large - padding of 24px/36px
+    2. medium - padding of 16px/20px
+    3. default - padding 14px/18px
 
 All buttons have a minimum width set.
 
@@ -55,24 +55,28 @@ All buttons have a minimum width set.
 
 :root {
   --button-background-color: transparent;
-  --button-color: var(--color-text-link);
   --button-font-size: 14px;
-  --button-padding: 8px 16px;
+  --button-padding: 14px 18px;
+  --button-color: var(--color-text-link);
 }
 
 button, button.flat {
-  padding: var(--button-padding);
   background: var(--button-background-color);
   color: var(--button-color);
   font-size: var(--button-font-size);
-  text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   min-width: 120px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+button.flat, button.link {
+  text-transform: uppercase;
 }
 
 button.primary-action {
-  background-color: var(--color-black-g1);
+  padding: var(--button-padding);
+  background-color: var(--color-primary);
   color: white;
 }
 
@@ -81,9 +85,10 @@ button.link:hover, button.link:active, button.link:focus{
 }
 
 button.large {
-  padding: 16px 32px;
+  padding: 24px 36px;
+  font-size: 20px;
 }
 
 button.medium {
-  padding: 12px 20px;
+  padding: 16px 20px;
 }

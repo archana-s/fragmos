@@ -39,10 +39,16 @@ Use text colors from variables for any of the typography.
     <div class="subheading">Subheading</div>
 
 <p class="body-2">Body 2</p>
+<p class="body-2">
+  Oh, elliptical, of course: for a while it would huddle against us and then it would take flight for a while. The tides, when the Moon swung closer, rose so high nobody could hold them back. There were nights when the Moon was full and very, very low, and the tide was so high that the Moon missed a ducking in the sea by a hair’s-breadth
+</p>
 
     <p class="body-2">Body 2</p>
 
 <p class="body-1">Body 1</p>
+<p class="body-1">
+  Oh, elliptical, of course: for a while it would huddle against us and then it would take flight for a while. The tides, when the Moon swung closer, rose so high nobody could hold them back. There were nights when the Moon was full and very, very low, and the tide was so high that the Moon missed a ducking in the sea by a hair’s-breadth
+</p>
 
     <p class="body-1">Body 1</p>
 
@@ -78,19 +84,35 @@ Here's the styleguide template for this project: ../styleguide_template/template
   --display-3-font-size: calc(var(--display-start-font-size) * 1.64);
   --display-2-font-size: calc(var(--display-start-font-size) * 1.32);
   --display-1-font-size: var(--display-start-font-size);
+}
 
-  @media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 480px) {
+  :root {
     --display-start-font-size: 22px;
   }
 }
 
-body {
-  line-height: 1.1em;
+body p, body div, body span, body section, body article {
+  line-height: 1.5em;
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+body * {
+  line-height: 1.5em;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 14px;
 }
 
 *[class^='display-'] {
-  font-family: 'Alegreya', serif;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.01em;
 }
 
 .display-4 {
@@ -121,22 +143,14 @@ body {
   font-size: 18px;
 }
 
-.body-2, .body-1 {
-  font-size: 14px;
-}
-
 .body-2 {
   font-weight: bold;
 }
 
 .caption, .label {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .caption {
   text-transform: uppercase;
-}
-
-.label {
-  color: var(--color-text-label);
 }

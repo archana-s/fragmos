@@ -10,14 +10,14 @@ There are three types of cards offered:
     2. card-info - Informational cards that can have links/buttons in them
     3. card-flip - Cards that flip to show some information on the other side
 
-<section class="card-click"><h1 class="display-1">Heading</h1><p>Lorem Ipsum</p></section>
+<section class="card-click vertical-box center theme-light"><h1 class="display-1">Heading</h1><p>Lorem Ipsum Lorem ipsum dolor sit amet, ei primis vituperatoribus mea, postea aeterno ea vim. Sea ornatus delenit gubergren eu, ut vel rebum populo disputationi. Numquam fuisset explicari nec an, vim quidam iriure delicatissimi in. Vim te tation vivendo, sea id epicuri repudiandae. Wisi aperiam dolorem eu duo, an luptatum interpretaris eam.</p></section>
 
-    <section class="card-click">
+    <section class="card-click vertical-box center theme-light">
       <h1 class="display-1">Heading</h1>
       <p>Loreum Ipsum</p>
     </section>
 
-<section class="card-info"><h1 class="display-1" style="padding-left: 14px;">Heading</h1><p style="padding-left: 14px;padding-bottom: 20px;">Lorem Ipsum</p><button class="link">Read more ...</button></section>
+<section class="card-info vertical-box center"><h1 class="display-1" style="padding-left: 14px;">Heading</h1><p style="padding-left: 14px;padding-bottom: 20px;">Simul neglegentur est et, at electram signiferumque qui. Ad probatus salutatus per. Mei lucilius sensibus ad, an ius ignota quaeque abhorreant, alii timeam an sea. Vim cetero detraxit ne, eam ea omnium dignissim. Te harum appetere molestiae vix. Pro no dolores apeirian.</p><button class="link">Read more ...</button></section>
 
     <section class="card-info">
       <h1 class="display-1"> Heading </h1>
@@ -25,28 +25,67 @@ There are three types of cards offered:
       <button> Read more ... </button>
     </section>
 
-<section class="card-flip" style="width: 250px;height: 300px;"><div class="card"><div class="front-face"><h1 class="display-1">Info</h1><p>Vestibulum volutpat pretium libero. Donec posuere vulputate arcu. Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui.</p></div><div class="back-face"><h1 class="display-1">More Info ...</h1><p>Praesent nec nisl a purus blandit viverra. Cras ultricies mi eu turpis hendrerit fringilla. Cum sociis natoque penatibus et magnis dis parturient montes.</p></div></div></section>
+<section class="card-flip"><div class="card"><div class="front-face vertical-box center"><h1 class="display-1">Feedback</h1><form class="vertical-box center" action="javascript:myFunction(); return false;"><label>Let us know what you think</label><textarea></textarea><button class="submit primary-action">Submit</button></form></div><div class="back-face vertical-box center"> <p class="headline color-text-secondary">Thank you for your feedback.</p></div></div></section>
 
-    <section class="card-flip">
+    <section class="card-flip vertical-box center">
       <div class="card">
-        <div class="front-face">
-          <h1 class="display-1">Info</h1>
-          <p>Vestibulum volutpat pretium libero. Donec posuere vulputate arcu. Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui. In ut quam vitae odio lacinia tincidunt.</p>
+        <div class="front-face vertical-box center">
+          <h1 class="display-1">Feedback</h1>
+          <form class="vertical-box center">
+            <label>Let us know what you think</label>
+            <textarea></textarea>
+            <button class="primary-action" type="submit">Submit</button>
+          </form>
         </div>
-        <div class="back-face">
-          <h1 class="display-1">More Info ...</h1>
-          <p>Praesent nec nisl a purus blandit viverra. Cras ultricies mi eu turpis hendrerit fringilla. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+        <div class="back-face vertical-box center">
+          <p className="headline color-text-secondary">Thank you for your feedback.</p>
         </div>
       </div>
     </section>
 
-<script type="text/javascript">var init = function() {var card = document.querySelector('.card');document.querySelector('.card').addEventListener('click', function() {var classes = card.getAttribute('class');if (classes.indexOf('flipped') >= 0) {card.setAttribute('class', classes.replace(/flipped/, ''));} else {card.setAttribute('class', classes + ' flipped');}}, false);};window.addEventListener('DOMContentLoaded', init, false);</script>
+Card dimensions
+
+Cards can be of two sizes: (Both of these are responsive)
+    1. regular - This is the default sizing 400px/400px
+    2. small - smaller version of the regular card 240px/240px
+
+Any of the above cards can follow these sizing.
+
+Example of small card:
+
+<section class="card-click small vertical-box center theme-light"><h1 class="display-1">Heading</h1><p>Lorem Ipsum Lorem ipsum dolor sit amet, ei primis vituperatoribus mea, postea aeterno ea vim. </p></section>
+
+    <section class="card-click small vertical-box center theme-light">
+      <h1 class="display-1">Heading</h1>
+      <p>Loreum Ipsum</p>
+    </section>
+
+<script type="text/javascript">var init = function() {var card = document.querySelector('.card');document.querySelector('.submit').addEventListener('click', function() {var classes = card.getAttribute('class');if (classes.indexOf('flipped') >= 0) {card.setAttribute('class', classes.replace(/flipped/, ''));} else {card.setAttribute('class', classes + ' flipped');}}, false);};window.addEventListener('DOMContentLoaded', init, false);</script>
 */
 
 :root {
   --card-background: white;
   --card-hover-background: #FBFBFB;
   --card-flip-background: #FAFAFA;
+}
+
+*[class^="card-"] {
+  width: 400px;
+  height: 400px;
+  margin: 12px;
+}
+
+*[class^="card-"].small {
+  width: 240px;
+  height: 240px;
+  margin: 4px;
+}
+
+@media only screen and (max-device-width: 480px) {
+  *[class^="card-"] {
+    width: 97%;
+    height: 97%;
+  }
 }
 
 .card-click, .card-info, .card-flip .card .front-face, .card-flip .card .back-face {
@@ -56,14 +95,6 @@ There are three types of cards offered:
 
 .card-click, .card-flip {
   cursor: pointer;
-}
-
-.card-click, .card-info, .card-flip .card- .front-face {
-  background-color: var(--card-background);
-}
-
-.card-click:hover {
-  background-color: var(--card-hover-background);
 }
 
 .card-flip {
