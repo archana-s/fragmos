@@ -13,26 +13,27 @@ Add other variants as fit.
 <textarea></textarea>
 
     <textarea></textarea>
+
+<div><input type="radio" name="option1"><label for="option1">Option 1</label></div>
+
+    <div><input type="radio" name="option1"><label for="option1">Option 1</label></div>
 */
 
 input[type="text"], textarea {
   padding: 8px 12px;
   position: relative;
+  min-width: 300px;
+  background-color: transparent;
 }
 
 textarea {
-  border: 1px solid var(--color-black-g3);
-  min-width: 240px;
+  border: 1px solid var(--color-divider-light);
   height: 100px;
   resize: none;
 }
 
-input.search {
-
-}
-
 input[type="radio"] {
-
+  margin-right: 6px;
 }
 
 input[type="checkbox"] {

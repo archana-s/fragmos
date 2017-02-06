@@ -1,21 +1,21 @@
 /* @start color */
 :root {
     /* Main colors for the app: Logo colors, banner colors, main background  */
-    --color-primary: #FF8788;
-    --theme-light: #FAFAFA;
-    --theme-white: white;
+    --color-primary: #9B7536;
 
     /* Text colors */
-    --color-text-primary: #000000;
-    --color-text-secondary: #222;
+    --color-text-primary: #40545D;
     --color-text-link: #3F51B5;
+    --color-text-on-dark: #FFFFFF;
+
     /** TIP: Check for contrast ratio again all background colors,
         * notification colors, against the text colors and make sure the constrast ratio is 4.5.
         * This makes it accessible and available to a larger audience.
     **/
 
     /* Overall colors for your app */
-    --color-accent-red-light: #FF00;
+    --color-accent-green: #4B4C22;
+    --color-accent-blue: #40545D;
 
     /** TIP: Add other colors you think are necessary for your project.
       * Try not to include more than 3 shades of that color. This leads to color collisions and
@@ -30,12 +30,14 @@
     --color-divider-light: rgba(0, 0, 0, 0.35);
 
     /* The inevitables */
-    --color-black-g1: rgba(0, 0, 0, 0.8);
-    --color-black-g2: rgba(0, 0, 0, 0.5);
-    --color-black-g3: rgba(0, 0, 0, 0.2);
-    --color-white-g1: rgba(255, 255, 255, 0.9);
-    --color-white-g2: rgba(255, 255, 255, 0.5);
-    --color-white-g3: rgba(255, 255, 255, 0.2);
+    --color-gold-g1: #F4F3EE;
+    --color-white-g1: #FFFFFF;
+    --color-white-g2: #F4F3EE;
+    --color-white-g3: #CCBA9A;
+
+    --theme-light: var(--color-white-g2);
+    --theme-white: white;
+    --theme-gray: #C6CED1;
 
     /** TIP: Keep this section for the colors you will inevitably need in a large app.
         Make sure to reduce to keep the variations of each shade under 3 or 5. These
@@ -52,12 +54,12 @@
   background-color: var(--theme-light);
 }
 
-.color-text-primary {
-  color: var(--color-text-primary);
+.theme-gray {
+  background-color: var(--theme-gray);
 }
 
-.color-text-secondary {
-  color: var(--color-text-secondary);
+.color-text-primary {
+  color: var(--color-text-primary);
 }
 
 .color-text-link {

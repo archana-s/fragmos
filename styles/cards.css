@@ -6,18 +6,27 @@
 Card-based layout has become popular and is great for organizing content.
 There are three types of cards offered:
 
-    1. card-click - cards that click
+    1. card - A padded space to place content
+    2. card-click - cards that click to take you somewhere (link or modal)
     2. card-info - Informational cards that can have links/buttons in them
     3. card-flip - Cards that flip to show some information on the other side
 
-<section class="card-click vertical-box center theme-light"><h1 class="display-1">Heading</h1><p>Lorem Ipsum Lorem ipsum dolor sit amet, ei primis vituperatoribus mea, postea aeterno ea vim. Sea ornatus delenit gubergren eu, ut vel rebum populo disputationi. Numquam fuisset explicari nec an, vim quidam iriure delicatissimi in. Vim te tation vivendo, sea id epicuri repudiandae. Wisi aperiam dolorem eu duo, an luptatum interpretaris eam.</p></section>
+<section class="card vertical center theme-light"><h1 class="display-1">Heading</h1><p>Lorem Ipsum Lorem ipsum dolor sit amet, ei primis vituperatoribus mea, postea aeterno ea vim. Sea ornatus delenit gubergren eu, ut vel rebum populo disputationi. Numquam fuisset explicari nec an, vim quidam iriure delicatissimi in. Vim te tation vivendo, sea id epicuri repudiandae. Wisi aperiam dolorem eu duo, an luptatum interpretaris eam.</p></section>
 
-    <section class="card-click vertical-box center theme-light">
+    <section class="card-click vertical center theme-light">
       <h1 class="display-1">Heading</h1>
       <p>Loreum Ipsum</p>
     </section>
 
-<section class="card-info vertical-box center"><h1 class="display-1" style="padding-left: 14px;">Heading</h1><p style="padding-left: 14px;padding-bottom: 20px;">Simul neglegentur est et, at electram signiferumque qui. Ad probatus salutatus per. Mei lucilius sensibus ad, an ius ignota quaeque abhorreant, alii timeam an sea. Vim cetero detraxit ne, eam ea omnium dignissim. Te harum appetere molestiae vix. Pro no dolores apeirian.</p><button class="link">Read more ...</button></section>
+
+<section class="card-click vertical center theme-light"><h1 class="display-1">Heading</h1><p>Lorem Ipsum Lorem ipsum dolor sit amet, ei primis vituperatoribus mea, postea aeterno ea vim. Sea ornatus delenit gubergren eu, ut vel rebum populo disputationi. Numquam fuisset explicari nec an, vim quidam iriure delicatissimi in. Vim te tation vivendo, sea id epicuri repudiandae. Wisi aperiam dolorem eu duo, an luptatum interpretaris eam.</p></section>
+
+    <section class="card-click vertical center theme-light">
+      <h1 class="display-1">Heading</h1>
+      <p>Loreum Ipsum</p>
+    </section>
+
+<section class="card-info vertical center"><h1 class="display-1" style="padding-left: 14px;">Heading</h1><p style="padding-left: 14px;padding-bottom: 20px;">Simul neglegentur est et, at electram signiferumque qui. Ad probatus salutatus per. Mei lucilius sensibus ad, an ius ignota quaeque abhorreant, alii timeam an sea. Vim cetero detraxit ne, eam ea omnium dignissim. Te harum appetere molestiae vix. Pro no dolores apeirian.</p><button class="link">Read more ...</button></section>
 
     <section class="card-info">
       <h1 class="display-1"> Heading </h1>
@@ -25,37 +34,37 @@ There are three types of cards offered:
       <button> Read more ... </button>
     </section>
 
-<section class="card-flip"><div class="card"><div class="front-face vertical-box center"><h1 class="display-1">Feedback</h1><form class="vertical-box center" action="javascript:myFunction(); return false;"><label>Let us know what you think</label><textarea></textarea><button class="submit primary-action">Submit</button></form></div><div class="back-face vertical-box center"> <p class="headline color-text-secondary">Thank you for your feedback.</p></div></div></section>
+<section class="card-flip" style="width:350px;height:320px;"><div class="card"><div class="front-face vertical center"><h1 class="display-1">Feedback</h1><form class="vertical center" action="javascript:myFunction(); return false;"><label>Let us know what you think</label><textarea></textarea><button class="submit primary-action">Submit</button></form></div><div class="back-face vertical center"> <p class="headline color-text-secondary">Thank you for your feedback.</p></div></div></section>
 
-    <section class="card-flip vertical-box center">
+    <section class="card-flip vertical center">
       <div class="card">
-        <div class="front-face vertical-box center">
+        <div class="front-face vertical center">
           <h1 class="display-1">Feedback</h1>
-          <form class="vertical-box center">
+          <form class="vertical center">
             <label>Let us know what you think</label>
             <textarea></textarea>
             <button class="primary-action" type="submit">Submit</button>
           </form>
         </div>
-        <div class="back-face vertical-box center">
+        <div class="back-face vertical center">
           <p className="headline color-text-secondary">Thank you for your feedback.</p>
         </div>
       </div>
     </section>
 
-Card dimensions
+Card Spacings
 
-Cards can be of two sizes: (Both of these are responsive)
-    1. regular - This is the default sizing 400px/400px
-    2. small - smaller version of the regular card 240px/240px
+Cards can be of two spacings:
+    1. regular - This is the default padding 18px 24px
+    2. small - smaller version of the regular card padding 8px 10px. This is preferred for smaller devices.
 
-Any of the above cards can follow these sizing.
+Any of the above cards can follow these paddings.
 
 Example of small card:
 
-<section class="card-click small vertical-box center theme-light"><h1 class="display-1">Heading</h1><p>Lorem Ipsum Lorem ipsum dolor sit amet, ei primis vituperatoribus mea, postea aeterno ea vim. </p></section>
+<section class="card-click small vertical center theme-light"><h1 class="display-1">Heading</h1><p>Lorem Ipsum Lorem ipsum dolor sit amet, ei primis vituperatoribus mea, postea aeterno ea vim. </p></section>
 
-    <section class="card-click small vertical-box center theme-light">
+    <section class="card-click small vertical center theme-light">
       <h1 class="display-1">Heading</h1>
       <p>Loreum Ipsum</p>
     </section>
@@ -69,28 +78,27 @@ Example of small card:
   --card-flip-background: #FAFAFA;
 }
 
-*[class^="card-"] {
-  width: 400px;
-  height: 400px;
+*[class^="card"] {
   margin: 12px;
 }
 
-*[class^="card-"].small {
-  width: 240px;
-  height: 240px;
+*[class^="card"].small {
   margin: 4px;
 }
 
 @media only screen and (max-device-width: 480px) {
-  *[class^="card-"] {
+  *[class^="card"] {
     width: 97%;
     height: 97%;
   }
 }
 
-.card-click, .card-info, .card-flip .card .front-face, .card-flip .card .back-face {
+.card, .card-click, .card-info, .card-flip .card .front-face, .card-flip .card .back-face {
   padding: 18px 24px;
-  border: 1px solid var(--color-black-g3);
+}
+
+.card-click:not(.noborder), .card-info:not(.noborder), .card-flip .card .front-face:not(.noborder), .card-flip .card .back-face:not(.noborder) {
+  border: 1px solid var(--color-primary);
 }
 
 .card-click, .card-flip {
@@ -102,7 +110,7 @@ Example of small card:
   position: relative;
 }
 
-.card {
+.card-flip > .card {
   position: absolute;
   width: 100%;
   height: 100%;

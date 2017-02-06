@@ -5,11 +5,11 @@
 
 Buttons can be categorized based on form and function.
 These are three categories for buttons based on function:
-    1. primary-action -
+    1. primary -
        Ones that call for action and are bold and bright. A page can have just one of these.
     2. link -
       Button that looks like a link
-    3. flat(default) -
+    3. passive(default) -
        Buttons that are used in the page which do not immediately call for action.
        They are not the primary action for the page.
 
@@ -20,33 +20,33 @@ Buttons can be small or large depending on the usecase. Here are two variation b
 
 All buttons have a minimum width set.
 
-<button class="primary-action">Primary Action</button>
+<button class="primary">Primary Action</button>
 
-    <button class="primary-action">Primary Action</button>
+    <button class="primary">Primary Action</button>
 
-<button class="flat">Flat</button>
+<button class="passive">passive</button>
 
-    <button class="flat">Flat</button>
+    <button class="passive">passive</button>
 
 <button class="link">Link</button>
 
     <button class="link">Link</button>
 
-<button class="primary-action large">Large Primary</button>
+<button class="primary large">Large Primary</button>
 
-    <button class="primary-action large">Large Primary</button>
+    <button class="primary large">Large Primary</button>
 
-<button class="primary-action medium">Medium Primary</button>
+<button class="primary medium">Medium Primary</button>
 
-    <button class="primary-action medium">Medium Primary</button>
+    <button class="primary medium">Medium Primary</button>
 
-<button class="flat large">Large Flat</button>
+<button class="passive large">Large passive</button>
 
-    <button class="flat large">Large Flat</button>
+    <button class="passive large">Large passive</button>
 
-<button class="flat medium">Medium Flat</button>
+<button class="passive medium">Medium passive</button>
 
-    <button class="flat medium">Medium Flat</button>
+    <button class="passive medium">Medium passive</button>
 
 <button class="link">Normal Link</button>
 
@@ -57,27 +57,35 @@ All buttons have a minimum width set.
   --button-background-color: transparent;
   --button-font-size: 14px;
   --button-padding: 14px 18px;
-  --button-color: var(--color-text-link);
 }
 
-button, button.flat {
-  background: var(--button-background-color);
-  color: var(--button-color);
+button {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.08em;
+  font-weight: 300;
   font-size: var(--button-font-size);
-  font-weight: 400;
-  min-width: 120px;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 0.02em;
-}
-
-button.flat, button.link {
+  box-shadow: none;
+  border: none;
   text-transform: uppercase;
 }
 
-button.primary-action {
+button:not(.link) {
+  min-width: 120px;
+}
+
+button.primary, button.passive {
   padding: var(--button-padding);
-  background-color: var(--color-primary);
+}
+
+button.primary {
+  background-color: var(--color-accent-blue);
   color: white;
+}
+
+button.passive {
+  background-color: transparent;
+  border: 1px solid var(--color-accent-blue);
+  color: var(--color-primary-text);
 }
 
 button.link:hover, button.link:active, button.link:focus{

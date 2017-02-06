@@ -78,7 +78,7 @@ Here's the styleguide template for this project: ../styleguide_template/template
 :root {
   /* alter the display start size to appropriate value for desktop and mobile and all the
    * display sizes will be adjusted appropriately */
-  --display-start-font-size: 34px;
+  --display-start-font-size: 24px;
 
   --display-4-font-size: calc(var(--display-start-font-size) * 3.3);
   --display-3-font-size: calc(var(--display-start-font-size) * 1.64);
@@ -92,14 +92,15 @@ Here's the styleguide template for this project: ../styleguide_template/template
   }
 }
 
-body p, body div, body span, body section, body article {
+body p, body div {
   line-height: 1.5em;
-  font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 body * {
   line-height: 1.5em;
+  color: var(--color-text-primary);
 }
 
 code,
@@ -111,7 +112,7 @@ samp {
 }
 
 *[class^='display-'] {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Droid Serif', serif;
   letter-spacing: 0.01em;
 }
 
@@ -131,12 +132,32 @@ samp {
   font-size: var(--display-1-font-size);
 }
 
+.headline, .title, .subheading, .body-2, .caption, .label {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.headline, .title {
+  padding-bottom: 12px;
+  position: relative;
+  display: inline-block;
+}
+
+.headline:after, .title:after {
+  content: '';
+  border-bottom: 1px solid var(--color-primary);
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 0;
+}
+
 .headline {
-  font-size: 24px;
+  font-size: 18px;
+  font-weight: 300;
 }
 
 .title {
-  font-size: 21px;
+  font-size: 16px;
 }
 
 .subheading {

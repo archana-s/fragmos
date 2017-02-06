@@ -7,49 +7,44 @@ Tabs/Navigation Bar
 
 Default tabs
 <ul class="tabs">
-  <li class="selected">Item 1</li>
-  <li>Item 2</li>
+  <li>Item 1</li>
+  <li class="selected">Item 2</li>
   <li>Item 3</li>
 </ul>
 
     <ul class="tabs">
-      <li class="selected">Item 1</li>
-      <li>Item 2</li>
+      <li>Item 1</li>
+      <li class="selected">Item 2</li>
       <li>Item 3</li>
     </ul>
 
-Tabs with no bar
-<ul class="tabs no-bar">
-  <li class="selected">Item 1</li>
-  <li>Item 2</li>
-  <li>Item 3</li>
-</ul>
-
-    <ul class="tabs">
-      <li class="selected">Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
-    </ul>
 */
 
 ul.tabs {
   display: flex;
-  background-color: var(--color-primary);
-  color: var(--color-white-g1);
+  background-color: inherit;
+  font-family: 'Open Sans', sans-serif;
 }
 
 ul.tabs > li {
-  padding: 12px 32px;
+  padding: 16px;
   cursor: pointer;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 ul.tabs > li.selected {
-  border-bottom: 4px solid var(--color-yellow);
+  font-weight: bold;
+  color: var(--color-white-g1);
 }
 
-ul.tabs.no-bar > li.selected {
-  color: var(--color-yellow);
-  border: none;
+ul.tabs > li:not(.selected) {
+  color: var(--color-white-g3);
+}
+
+ul.tabs > li:not(.selected):hover {
+  color: var(--color-white-g1);
 }
 
 @media only screen and (max-device-width: 480px) {
