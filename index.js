@@ -15,3 +15,4 @@ app.listen(3000, function () {
 })
 
 app.use('/public', express.static(path.join(__dirname, '/public')))
+app.use('/styles', express.static(path.join(__dirname, '/styles')))

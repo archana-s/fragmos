@@ -34,16 +34,16 @@ There are three types of cards offered:
       <button> Read more ... </button>
     </section>
 
-<section class="card-flip" style="width:350px;height:320px;"><div class="card"><div class="front-face vertical center"><h1 class="display-1">Feedback</h1><form class="vertical center" action="javascript:myFunction(); return false;"><label>Let us know what you think</label><textarea></textarea><button class="submit primary-action">Submit</button></form></div><div class="back-face vertical center"> <p class="headline color-text-secondary">Thank you for your feedback.</p></div></div></section>
+<section class="card-flip" style="width:350px;height:320px;"><div class="card flipping-card"><div class="front-face vertical center"><h1 class="display-1">Feedback</h1><form class="vertical center" action="javascript:myFunction(); return false;"><label>Let us know what you think</label><textarea></textarea><button class="submit primary">Submit</button></form></div><div class="back-face vertical center"> <p class="headline color-text-secondary">Thank you for your feedback.</p></div></div></section>
 
     <section class="card-flip vertical center">
-      <div class="card">
+      <div class="card flipping-card">
         <div class="front-face vertical center">
           <h1 class="display-1">Feedback</h1>
           <form class="vertical center">
             <label>Let us know what you think</label>
             <textarea></textarea>
-            <button class="primary-action" type="submit">Submit</button>
+            <button class="primary submit" type="submit">Submit</button>
           </form>
         </div>
         <div class="back-face vertical center">
@@ -69,7 +69,14 @@ Example of small card:
       <p>Loreum Ipsum</p>
     </section>
 
-<script type="text/javascript">var init = function() {var card = document.querySelector('.card');document.querySelector('.submit').addEventListener('click', function() {var classes = card.getAttribute('class');if (classes.indexOf('flipped') >= 0) {card.setAttribute('class', classes.replace(/flipped/, ''));} else {card.setAttribute('class', classes + ' flipped');}}, false);};window.addEventListener('DOMContentLoaded', init, false);</script>
+<script type="text/javascript">
+  window.addEventListener('DOMContentLoaded', function() {
+    var card = document.getElementsByClassName('flipping-card')[0];
+    document.querySelector('.submit').addEventListener('click', function() {
+      card.classList.toggle('flipped')
+    });
+  });
+</script>
 */
 
 :root {

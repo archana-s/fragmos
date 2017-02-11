@@ -92,10 +92,17 @@ Here's the styleguide template for this project: ../styleguide_template/template
   }
 }
 
-body p, body div {
+p, div {
   line-height: 1.5em;
   font-size: 16px;
+}
+
+div {
   font-family: 'Roboto Condensed', sans-serif;
+}
+
+p {
+  font-family: 'Lora', serif;
 }
 
 body * {
