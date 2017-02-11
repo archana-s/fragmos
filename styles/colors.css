@@ -34,6 +34,7 @@
     --color-white-g1: #FFFFFF;
     --color-white-g2: #F4F3EE;
     --color-white-g3: #CCBA9A;
+    --color-accent-blue-g1: #263237;
 
     --theme-light: var(--color-white-g2);
     --theme-white: white;
