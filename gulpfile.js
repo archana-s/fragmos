@@ -1,5 +1,4 @@
 var gulp = require('gulp')
-var postcss = require('gulp-postcss')
 
 /* Build styleguide */
 gulp.task('build:styleguide', function () {
@@ -12,7 +11,7 @@ gulp.task('build:styleguide', function () {
     var extend = require('postcss-extend')
     var nano = require('cssnano')
 
-    return gulp.src('./styles/app.css')
+    return gulp.src('./src/styles/app.css')
       .pipe(postcss([
           Import,
           extend,
@@ -20,9 +19,9 @@ gulp.task('build:styleguide', function () {
           autoprefixer,
           styleGuide({
               project: 'Styleguide',
-              dest: 'styleguide/index.html',
+              dest: 'public/styleguide.html',
               showCode: false,
-              themePath: './styleguide-template/'
+              themePath: './src/styleguide-template/'
           }),
           nano
       ]))

@@ -7,7 +7,7 @@ app.get('/demo', function (req, res) {
 })
 
 app.get('/styleguide', function (req, res) {
-  res.sendFile(path.join(__dirname, '/styleguide/index.html'))
+  res.sendFile(path.join(__dirname, '/public/styleguide.html'))
 })
 
 app.listen(3000, function () {
@@ -15,4 +15,4 @@ app.listen(3000, function () {
 })
 
 app.use('/public', express.static(path.join(__dirname, '/public')))
-app.use('/styles', express.static(path.join(__dirname, '/styles')))
+app.use('/src', express.static(path.join(__dirname, '/src')))
