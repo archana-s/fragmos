@@ -14,8 +14,6 @@
     "recursive-copy": "^2.0.5"
   },
   "devDependencies": {
-    "babel-preset-es2015": "^6.22.0",
-    "bluebird": "^3.4.7",
     "fs-promise": "^2.0.0",
     "gulp-concat": "^2.6.0",
     "gulp-postcss": "^6.1.0",
@@ -27,10 +25,8 @@
     "postcss-style-guide": "^0.13.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm install;gulp build:styleguide;gulp copy:common-files",
-    "start": "node ./index.js;gulp",
-    "babelify": "babel --presets es2015 setup_dev.js --out-file setup.js"
+    "start": "node ./index.js;gulp"
   },
   "repository": {
     "type": "git",

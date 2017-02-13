@@ -18,7 +18,7 @@ gulp.task('build:styleguide', function () {
           customProperties({ preserve: true }),
           autoprefixer,
           styleGuide({
-              project: 'Styleguide',
+              project: '%%project%%',
               dest: 'public/styleguide.html',
               showCode: false,
               themePath: './src/styleguide-template/'
