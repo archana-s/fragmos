@@ -38,7 +38,7 @@
 
     --theme-light: var(--color-white-g2);
     --theme-white: white;
-    --theme-gray: #C6CED1;
+    --theme-gray: #E1E8EA;
 
     /** TIP: Keep this section for the colors you will inevitably need in a large app.
         Make sure to reduce to keep the variations of each shade under 3 or 5. These

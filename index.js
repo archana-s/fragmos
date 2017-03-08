@@ -10,8 +10,8 @@ app.get('/styleguide', function (req, res) {
   res.sendFile(path.join(__dirname, '/public/styleguide.html'))
 })
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+app.listen(4500, function () {
+  console.log('Example app listening on port 4500!')
 })
 
 app.use('/public', express.static(path.join(__dirname, '/public')))

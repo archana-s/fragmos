@@ -147,6 +147,7 @@ samp {
   padding-bottom: 12px;
   position: relative;
   display: inline-block;
+  text-transform: uppercase;
 }
 
 .headline:after, .title:after {
@@ -176,6 +177,7 @@ samp {
 }
 
 .caption, .label {
+  color: var(--color-primary);
   font-size: 14px;
 }
 

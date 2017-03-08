@@ -30,9 +30,9 @@ gulp.task('build:styleguide', function () {
 })
 
 gulp.task('copy:common-files', function() {
-  return gulp.src('./styles/images/*.*').pipe(gulp.dest('./public/images'))
+  return gulp.src('./src/styles/images/*.*').pipe(gulp.dest('./public/images'))
 })
 
 gulp.task('default', function() {
-  gulp.watch('styles/*.css', ['build:styleguide'])
+  gulp.watch('src/styles/*.css', ['build:styleguide'])
 })

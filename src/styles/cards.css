@@ -6,16 +6,16 @@
 Card-based layout has become popular and is great for organizing content.
 There are three types of cards offered:
 
-    1. card - A padded space to place content
+    1. card-basic - A padded space to place content
     2. card-click - cards that click to take you somewhere (link or modal)
     2. card-info - Informational cards that can have links/buttons in them
     3. card-flip - Cards that flip to show some information on the other side
 
-<section class="card vertical center theme-light"><h1 class="display-1">Heading</h1><p>Lorem Ipsum Lorem ipsum dolor sit amet, ei primis vituperatoribus mea, postea aeterno ea vim. Sea ornatus delenit gubergren eu, ut vel rebum populo disputationi. Numquam fuisset explicari nec an, vim quidam iriure delicatissimi in. Vim te tation vivendo, sea id epicuri repudiandae. Wisi aperiam dolorem eu duo, an luptatum interpretaris eam.</p></section>
+<section class="card-basic vertical center theme-light"><h1 class="display-1">Heading</h1><p>Lorem Ipsum Lorem ipsum dolor sit amet, ei primis vituperatoribus mea, postea aeterno ea vim. Sea ornatus delenit gubergren eu, ut vel rebum populo disputationi. Numquam fuisset explicari nec an, vim quidam iriure delicatissimi in. Vim te tation vivendo, sea id epicuri repudiandae. Wisi aperiam dolorem eu duo, an luptatum interpretaris eam.</p></section>
 
     <section class="card-click vertical center theme-light">
       <h1 class="display-1">Heading</h1>
-      <p>Loreum Ipsum</p>
+      <p>The background color is to demonstrate the padding for the card. It can be left as it.</p>
     </section>
 
 
@@ -23,7 +23,7 @@ There are three types of cards offered:
 
     <section class="card-click vertical center theme-light">
       <h1 class="display-1">Heading</h1>
-      <p>Loreum Ipsum</p>
+      <p>The background color is to demonstrate the padding for the card. It can be left as is.</p>
     </section>
 
 <section class="card-info vertical center"><h1 class="display-1" style="padding-left: 14px;">Heading</h1><p style="padding-left: 14px;padding-bottom: 20px;">Simul neglegentur est et, at electram signiferumque qui. Ad probatus salutatus per. Mei lucilius sensibus ad, an ius ignota quaeque abhorreant, alii timeam an sea. Vim cetero detraxit ne, eam ea omnium dignissim. Te harum appetere molestiae vix. Pro no dolores apeirian.</p><button class="link">Read more ...</button></section>
@@ -85,11 +85,11 @@ Example of small card:
   --card-flip-background: #FAFAFA;
 }
 
-*[class^="card"] {
+*[class^="card-"] {
   margin: 12px;
 }
 
-*[class^="card"].small {
+*[class^="card-"].small {
   margin: 4px;
 }
 
@@ -100,7 +100,7 @@ Example of small card:
   }
 }
 
-.card, .card-click, .card-info, .card-flip .card .front-face, .card-flip .card .back-face {
+.card-basic, .card-click, .card-info, .card-flip {
   padding: 18px 24px;
 }
 

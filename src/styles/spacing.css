@@ -2,7 +2,7 @@ header, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 16px;
 }
 
-div, p, section, aside, article, input, textarea, form {
+p, section, aside, article, input, textarea, form {
   margin-bottom: 12px;
 }
 
