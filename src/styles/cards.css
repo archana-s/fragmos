@@ -139,6 +139,5 @@ Example of small card:
 }
 
 .card-flip .back-face {
-  background-color: var(--card-flip-background);
   transform: rotateY(180deg);
 }
