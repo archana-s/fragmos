@@ -93,7 +93,7 @@ button.passive {
 }
 
 button.passive:hover {
-  background-color: rgba(204, 204, 204, 0.3);
+  background-color: rgba(204, 204, 204, 0.5);
 }
 
 button.link:hover, button.link:active, button.link:focus{
