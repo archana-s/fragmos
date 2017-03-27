@@ -26,7 +26,7 @@
   },
   "scripts": {
     "build": "npm install;gulp build:styleguide;gulp copy:common-files;",
-    "start": "npm install;node ./index.js;gulp"
+    "start": "npm install;node ./index.js;gulp build:styleguide;gulp"
   },
   "repository": {
     "type": "git",
