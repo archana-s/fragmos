@@ -25,8 +25,8 @@
     "postcss-style-guide": "^0.13.0"
   },
   "scripts": {
-    "build": "npm install;gulp build:styleguide;gulp copy:common-files;",
-    "start": "npm install;node ./index.js;gulp build:styleguide;gulp"
+    "build": "npm install&gulp build:styleguide&gulp copy:common-files;",
+    "start": "npm install&node ./index.js&gulp build:styleguide&gulp"
   },
   "repository": {
     "type": "git",
