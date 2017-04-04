@@ -28,7 +28,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "setup": "npm install&gulp build:styleguide&gulp copy:common-files&node setup.js",
+    "build": "npm install&gulp build:styleguide&gulp copy:common-files",
     "start": "node ./index.js&gulp",
     "babelify": "babel --presets es2015 setup_dev.js --out-file setup.js"
   },
@@ -42,6 +42,9 @@
     "patterns",
     "ui"
   ],
+  "bin": {
+    "fragmos": "./setup.js"
+  },
   "author": "Archana Sankaranarayanan",
   "license": "ISC",
   "bugs": {
