@@ -1,20 +1,25 @@
-var express = require('express')
-var app = express()
-var path = require('path')
+const { createReadStream } = require('fs')
+const { join } = require('path')
+const express = require('express')
+const app = express()
+const relative = path => join(__dirname, path)
 
-console.log('Hello, welcome to Fragmos v1.0');
+console.info('Hello and welcome to Fragmos v1.0!')
 
-app.get('/demo', function (req, res) {
-  res.sendFile(path.join(__dirname, '/public/demo.html'))
+app.use('/public', express.static(relative('./public')))
+app.use('/src', express.static(relative('./src')))
+
+app.get('/demo', (req, res) => {
+  createReadStream(relative('./public/demo.html')).pipe(res)
 })
 
-app.get('/styleguide', function (req, res) {
-  res.sendFile(path.join(__dirname, '/public/styleguide.html'))
-})
+const serveStyleGuide = (req, res) => {
+  createReadStream(relative('./public/styleguide.html')).pipe(res)
+};
 
-app.listen(4500, function () {
-  console.log('Example app listening on port 4500!')
-})
+app.get('/styleguide', serveStyleGuide)
+app.get('/', serveStyleGuide)
 
-app.use('/public', express.static(path.join(__dirname, '/public')))
-app.use('/src', express.static(path.join(__dirname, '/src')))
+app.listen(4500, () => {
+  console.log('Now listening on http://localhost:4500\n')
+})
