@@ -10,6 +10,7 @@ gulp.task('build:styleguide', function () {
     var styleGuide = require('postcss-style-guide')
     var extend = require('postcss-extend')
     var nano = require('cssnano')
+    var livereload = require('gulp-livereload')
 
     return gulp.src('./src/styles/app.css')
       .pipe(postcss([
@@ -27,12 +28,14 @@ gulp.task('build:styleguide', function () {
       ]))
       .pipe(concat('./public/styleguide.min.css'))
       .pipe(gulp.dest('.'))
+      .pipe(livereload())
 })
 
 gulp.task('copy:common-files', function() {
-  return gulp.src('./src/styles/images/*.*').pipe(gulp.dest('./public/images'))
+  return gulp.src('./src/styles/images/*.*').pipe(gulp.dest('./public/images'));
 })
 
 gulp.task('default', function() {
-  gulp.watch('src/styles/*.css', ['build:styleguide'])
+  livereload.listen();
+  gulp.watch('src/styles/*.css', ['build:styleguide']);
 })
